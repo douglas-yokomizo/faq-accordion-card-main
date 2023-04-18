@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --text-very-dark-blue: hsl(238, 29%, 16%);
+    --text-soft-red: hsl(14, 88%, 65%);
+    --text-very-grayish-blue: hsl(237, 12%, 33%);
+    --text-dark-grayish-blue: hsl(240, 6%, 50%);
+       
+    --bg-soft-violet: hsl(273, 75%, 66%);
+    --bg-soft-blue: hsl(240, 73%, 65%);
+    
+    --border-light-grayish: hsl(240, 5%, 91%);
+}
+
+html{
+    background-image: linear-gradient(var(--bg-soft-violet), var(--bg-soft-blue));
+    height: 100vh;
+}
+
+body{
+    font-family: 'Kumbh sans', sans-serif;
+}
+
+ul{
+    list-style-type: none;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.accordion{
+    display: flex;
+    position: relative;
+    background-color: white;
+    height: 60%;
+    width: 60%;
+    border-radius: 25px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    background-image: url(../images/bg-pattern-desktop.svg);
+    background-position: -80%;
+    background-repeat: no-repeat;
+    background-size: 68%;
+}
+
+.accordion .imagem{
+    position: absolute;
+    left: -5%;
+}
+
+.accordion .caixa{
+    position: absolute;
+    left: -9%;
+    top: 40%;
+}
+
+.conteudo{
+    width: 100%;
+    padding: 0 8% 0 50%;
+}
+
+.conteudo h1{
+    margin: 4rem 0 2rem 0;
+    font-size: 32px;
+}
+
+li:last-child{
+    margin-bottom: 6rem;
+}
+
+.item{
+    background-image: url(../images/icon-arrow-down.svg);
+    background-repeat: no-repeat;
+    background-position: top 50% right 5px;
+    border-bottom: .5px solid var(--border-light-grayish);
+    padding: 1rem 0;
+    }
+
+.pergunta:hover{
+    color: var(--text-soft-red);
+    transition: 0.5s ease;
+    cursor: pointer;
+}
+
+.item .pergunta{
+    font-weight: 300;
+    font-size: 20px;
+}
+
+.item .resposta{
+    font-weight: 400;
+    font-size: 12px;
+    display: none;
+}
+
+.item.mostrar h2{
+    font-style: bold;
+    color: var(--text-very-dark-blue);
+}
+
+.item.mostrar p{
+    color: var(--text-dark-grayish-blue);
+}
