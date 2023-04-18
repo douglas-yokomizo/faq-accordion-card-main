@@ -34,9 +34,28 @@ ul{
 
 main{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+}
+
+footer{
+    text-align: center;
+}
+
+a{
+    color: var(--border-light-grayish);
+}
+
+a:hover{
+    transition: ease-in 0.5s;
+    color: var(--text-soft-red);
+}
+
+.attribution{
+    color: var(--border-light-grayish);
+    text-decoration: none;
 }
 
 .accordion{
@@ -55,9 +74,13 @@ main{
     background-size: 68%;
 }
 
-.accordion .imagem{
+.accordion .imagem.desktop{
     position: absolute;
     left: -5%;
+}
+
+.imagem.mobile{
+    display: none;
 }
 
 .accordion .caixa{
@@ -120,4 +143,46 @@ li:last-child{
 
 .item.mostrar .seta{
     transform: rotate(180deg)
+}
+
+@media(max-width:1040px){
+    .imagem.desktop, .caixa{
+        display: none;
+    }
+    
+    .accordion{
+        background-image: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: url(../images/bg-pattern-mobile.svg);
+        background-position: center top;
+        background-repeat: none;
+        margin-top: 10rem;
+    }
+
+    .conteudo{
+        padding: 2rem;
+    }
+
+    .conteudo .item{
+        margin: .4rem
+    }
+
+    .conteudo h1{
+        text-align: center;
+        font-size: 42px;
+        margin-top: 10rem;
+    }
+
+    .conteudo .item p{
+        font-size: 16px;
+    }
+
+    .imagem.mobile{
+        display:block;
+        position: fixed;
+        aspect-ratio: 3;
+        top: 4%;
+    }
 }
