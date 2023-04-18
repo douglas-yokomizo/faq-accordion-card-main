@@ -25,6 +25,7 @@ html{
 
 body{
     font-family: 'Kumbh sans', sans-serif;
+    font-size: 12px;
 }
 
 ul{
@@ -79,13 +80,15 @@ li:last-child{
     margin-bottom: 6rem;
 }
 
-.item{
-    background-image: url(../images/icon-arrow-down.svg);
-    background-repeat: no-repeat;
-    background-position: top 50% right 5px;
+.item {
     border-bottom: .5px solid var(--border-light-grayish);
     padding: 1rem 0;
     }
+
+.item .seta{
+    margin: .5rem .7rem 0 0;
+    float: right;
+}
 
 .pergunta:hover{
     color: var(--text-soft-red);
@@ -101,14 +104,20 @@ li:last-child{
 .item .resposta{
     font-weight: 400;
     font-size: 12px;
+    padding: .5rem 0;
     display: none;
 }
 
 .item.mostrar h2{
-    font-style: bold;
+    font-weight: 700;
     color: var(--text-very-dark-blue);
 }
 
-.item.mostrar p{
+.item.mostrar .resposta{
+    display: block;
     color: var(--text-dark-grayish-blue);
+}
+
+.item.mostrar .seta{
+    transform: rotate(180deg)
 }
